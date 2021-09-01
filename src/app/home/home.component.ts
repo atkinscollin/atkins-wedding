@@ -8,6 +8,10 @@ import { MediaObserver } from '@angular/flex-layout';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+    date = 'Saturday, June 25th, 2022';
+    locationShort = '828 The Turn, Newport, KY';
+    locationFull = '828 The Turn, 828 Monmouth St, Newport, KY 41071';
+
     constructor(private media: MediaObserver) {}
 
     ngOnInit() {

@@ -9,23 +9,42 @@
         fxFlex.lg="75%"
         fxFlex.gt-lg="70%"
     >
-        <!-- <div class="banner-img-container" fxLayout="row" fxLayoutAlign="center center">
-            <img class="banner-img" src="assets/kelsey_collin_banner.jpg" alt="couple photo" />
-        </div>
-
-        <span class="mat-display-3 wedding-couple">Kelsey & Collin</span> -->
-
-        <div class="banner-img-container" fxLayout="row" fxLayoutAlign="center center">
-            <img class="banner-img" src="assets/kelsey_collin_banner.jpg" />
+        <section id="home" fxLayout="column" fxLayoutAlign="start center">
             <span class="couple-name">Kelsey & Collin</span>
-        </div>
+            <span class="wedding-short-info" fxHide.xs>{{ date }} @ {{ locationShort }}</span>
+            <span class="wedding-short-info" fxHide.gt-xs>{{ date }}</span>
+            <span class="wedding-short-info" fxHide.gt-xs>@ {{ locationShort }}</span>
 
-        <span class="mat-subheading-1">Monday, March 4th, 2019</span>
+            <mat-toolbar class="nav-toolbar" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-button routerLink="." fragment="home" routerLinkActive="active">
+                    <mat-icon>home</mat-icon>
+                    <span fxHide.xs>Home</span>
+                </button>
+                <button mat-button routerLink="." fragment="location" routerLinkActive="active">
+                    <mat-icon>place</mat-icon>
+                    <span fxHide.xs>Location</span>
+                </button>
+                <button mat-button routerLink="." fragment="accommodations" routerLinkActive="active">
+                    <mat-icon>night_shelter</mat-icon>
+                    <span fxHide.xs>Accommodations</span>
+                </button>
+                <button mat-button routerLink="." fragment="registry" routerLinkActive="active">
+                    <mat-icon>store</mat-icon>
+                    <span fxHide.xs>Registry</span>
+                </button>
+            </mat-toolbar>
 
-        <mat-divider></mat-divider>
+            <div class="banner-img-container" fxLayout="row" fxLayoutAlign="center center">
+                <img class="banner-img" src="assets/kelsey_collin_banner.jpg" alt="couple photo" />
+            </div>
+        </section>
 
         <section id="location" fxLayout="column" fxLayoutAlign="start center">
-            <h2>Location</h2>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <img class="subheader-img left-subheader-img" src="assets/rosemary.png" />
+                <span class="subheader">Location</span>
+                <img class="subheader-img right-subheader-img" src="assets/thyme.png" />
+            </div>
             <p>
                 <a mat-button href="https://www.theturnvintage.com/" target="_blank">
                     <mat-icon>web</mat-icon>
@@ -35,7 +54,7 @@
             <p>
                 <a mat-button href="https://g.page/828theturn?share" target="_blank">
                     <mat-icon>navigation</mat-icon>
-                    <span>828 The Turn, 828 Monmouth St, Newport, KY 41071</span>
+                    <span>{{ locationFull }}</span>
                 </a>
             </p>
             <iframe
@@ -49,10 +68,12 @@
             ></iframe>
         </section>
 
-        <mat-divider></mat-divider>
-
-        <section fxLayout="column" fxLayoutAlign="start center">
-            <h2 id="accommodations">Accommodations</h2>
+        <section id="accommodations" fxLayout="column" fxLayoutAlign="start center">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <img class="subheader-img left-subheader-img" src="assets/rosemary.png" />
+                <span class="subheader">Accommodations</span>
+                <img class="subheader-img right-subheader-img" src="assets/thyme.png" />
+            </div>
             <p>
                 <a mat-button href="">
                     <mat-icon>web</mat-icon>
@@ -68,10 +89,12 @@
             <p>info on hotel</p>
         </section>
 
-        <mat-divider></mat-divider>
-
-        <section fxLayout="column" fxLayoutAlign="start center">
-            <h2 id="registry">Registry</h2>
+        <section id="registry" fxLayout="column" fxLayoutAlign="start center">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <img class="subheader-img left-subheader-img" src="assets/rosemary.png" />
+                <span class="subheader">Registry</span>
+                <img class="subheader-img right-subheader-img" src="assets/thyme.png" />
+            </div>
             <p>
                 <a mat-button href="https://smile.amazon.com/" target="_blank">
                     <mat-icon svgIcon="amazon_logo"></mat-icon>

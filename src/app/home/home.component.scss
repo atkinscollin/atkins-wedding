@@ -1,15 +1,32 @@
+@import "src/theme/theme-variables";
+
 .home-container {
-    background-color: antiquewhite;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
+.couple-name {
+    font: 400 56px Dancing;
+}
+
+.wedding-short-info {
+    font: 400 20px Dancing;
+}
+
+.nav-toolbar {
+    background-color: antiquewhite;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .banner-img-container {
-    position: relative;
-    text-align: center;
-    color: white;
-    max-height: 300px;
     overflow: hidden;
+    @media #{$mat-gt-xs} {
+        max-height: 300px;
+    }
+    @media #{$mat-xs} {
+        max-height: 200px;
+    }
 }
 
 .banner-img {
@@ -17,17 +34,35 @@
     height: auto;
 }
 
-.couple-name {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Dancing;
-    font-size: xxx-large;
-}
-
 mat-divider {
     align-self: normal;
+}
+
+.subheader {
+    font: 400 32px Dancing;
+    @media #{$mat-gt-xs} {
+        padding: 0 50px;
+    }
+    @media #{$mat-xs} {
+        padding: 0 35px;
+    }
+}
+
+.subheader-img {
+    @media #{$mat-gt-xs} {
+        height: 100px;
+    }
+    @media #{$mat-xs} {
+        height: 80px;
+    }
+}
+
+.left-subheader-img {
+    transform: rotate(-90deg);
+}
+
+.right-subheader-img {
+    transform: rotate(90deg);
 }
 
 .confetti-canvas {
@@ -36,4 +71,5 @@ mat-divider {
     height: 100%;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
