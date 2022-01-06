@@ -12,7 +12,9 @@
         "prettier": "prettier --write \"./src/**/*.{ts,js,html,scss}\"",
         "prettier:check": "prettier --list-different \"./src/**/*.{ts,js,html,scss}\"",
         "postinstall": "npm run prettier -s && husky install",
-        "generate": "ng generate"
+        "generate": "ng generate",
+        "deploy-ghp": "ng deploy --base-href=atkins-wedding",
+        "deploy-ghp-custom-domain": "ng deploy --cname=example.com"
     },
     "dependencies": {
         "@angular/animations": "^12.1.1",
