@@ -12,7 +12,31 @@ export class HomeComponent implements OnInit {
     locationShort = '828 The Turn, Newport, KY';
     locationFull = '828 The Turn, 828 Monmouth St, Newport, KY 41071';
 
-    constructor(private media: MediaObserver) {}
+    imagesForSlider = [
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-123.jpg',
+        },
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-124.jpg',
+        },
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-125.jpg',
+        },
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-126.jpg',
+        },
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-127.jpg',
+        },
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-128.jpg',
+        },
+        {
+            path: 'assets/banner-photos/Kelsey-Collin_Engagement-Session_Glenwood-Gardens_Anna-Ray-Photography-129.jpg',
+        },
+    ];
+
+    constructor(public media: MediaObserver) {}
 
     ngOnInit() {
         const myCanvas = document.getElementById('canvas');

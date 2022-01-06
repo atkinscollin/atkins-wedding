@@ -34,9 +34,18 @@
                 </button>
             </mat-toolbar>
 
-            <div class="banner-img-container" fxLayout="row" fxLayoutAlign="center center">
-                <img class="banner-img" src="assets/kelsey_collin_banner.jpg" alt="couple photo" />
-            </div>
+            <carousel
+                [images]="imagesForSlider"
+                [objectFit]="'cover'"
+                [cellWidth]="'100%'"
+                [cellsToShow]="1"
+                [autoplay]="true"
+                [dots]="true"
+                [loop]="true"
+                [height]="media.isActive('gt-xs') ? 300 : 200"
+                [width]="media.isActive('gt-xs') ? 500 : 350"
+            >
+            </carousel>
         </section>
 
         <section id="location" fxLayout="column" fxLayoutAlign="start center">

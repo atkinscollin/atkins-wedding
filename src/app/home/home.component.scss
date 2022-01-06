@@ -19,21 +19,6 @@
     margin-bottom: 10px;
 }
 
-.banner-img-container {
-    overflow: hidden;
-    @media #{$mat-gt-xs} {
-        max-height: 300px;
-    }
-    @media #{$mat-xs} {
-        max-height: 200px;
-    }
-}
-
-.banner-img {
-    width: 100%;
-    height: auto;
-}
-
 mat-divider {
     align-self: normal;
 }
@@ -72,4 +57,5 @@ mat-divider {
     top: 0;
     left: 0;
     pointer-events: none;
+    z-index: 99999;
 }

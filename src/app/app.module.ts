@@ -5,10 +5,11 @@ import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@shared';
+import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from './@shared';
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
     imports: [
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
         RouterModule,
         BrowserAnimationsModule,
         MaterialModule,
+        IvyCarouselModule,
         SharedModule,
         HomeModule,
         AppRoutingModule, // must be imported as the last module as it contains the fallback route
