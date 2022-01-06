@@ -97,6 +97,9 @@ MIT
 @ngneat/until-destroy
 MIT
 
+angular-responsive-carousel
+Apache License 2.0
+
 canvas-confetti
 ISC
 ISC License
